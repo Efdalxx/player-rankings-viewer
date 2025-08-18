@@ -7,12 +7,8 @@ import { useToast } from "@/hooks/use-toast";
 const ServerInfo = () => {
   const { toast } = useToast();
 
-  const copyServerIP = () => {
-    navigator.clipboard.writeText("mcpvp.club");
-    toast({
-      title: "Copied!",
-      description: "Server IP copied to clipboard",
-    });
+  const openDiscord = () => {
+    window.open("https://discord.gg/hititler", "_blank");
   };
 
   return (
@@ -20,7 +16,7 @@ const ServerInfo = () => {
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-lg">
           <Info className="h-5 w-5 text-primary" />
-          Information
+          Discord Sunucumuz
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -31,19 +27,15 @@ const ServerInfo = () => {
         </div>
         
         <div className="text-center space-y-2">
-          <h3 className="font-semibold text-foreground">Server IP</h3>
+          <h3 className="font-semibold text-foreground">Discord Server</h3>
           <div className="flex items-center gap-2 justify-center">
-            <Badge variant="outline" className="font-mono text-sm px-3 py-1">
-              mcpvp.club
-            </Badge>
-            <Button 
-              size="sm" 
-              variant="ghost" 
-              onClick={copyServerIP}
-              className="h-7 w-7 p-0 hover:bg-primary/20"
+            <Badge 
+              variant="outline" 
+              className="font-mono text-sm px-3 py-1 cursor-pointer hover:bg-primary/20"
+              onClick={openDiscord}
             >
-              <Copy className="h-3 w-3" />
-            </Button>
+              discord.gg/hititler
+            </Badge>
           </div>
         </div>
       </CardContent>
