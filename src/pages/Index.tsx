@@ -49,7 +49,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              MC TIERS
+              Hititler Tier List
             </h1>
             <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
           </div>
